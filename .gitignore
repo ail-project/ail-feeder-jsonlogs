@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# editor stuff
+.idea
+
+# /etc
+etc/ail-feeder-jsonlogs.cfg

@@ -1,0 +1,19 @@
+[ail]
+url = https://127.0.0.1:7020/api/v1/import/json/item
+apikey = <YOURAPIKEY>
+ailfeedertype = torproxy
+uuid = 
+
+# datepattern follows 1989 C standard
+[folder]
+basedir = .
+prefix =
+suffix =
+datepattern = %Y%m%d
+
+# selector follows jmespath grammar
+# it should follow the multi-select hash spec
+# add u_ in front of keys to have these set together as keyid (this will be unique per exec)
+# for instance sending only  one line to AIL for several client requests on a webserver would look like that:
+[selector]
+selector = "{u_request: request , u_remote_ip: ip, time: time}"
