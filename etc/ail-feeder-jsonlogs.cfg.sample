@@ -1,0 +1,30 @@
+[ail]
+url = https://127.0.0.1:7020/api/v1/import/json/item
+apikey = <YOURAPIKEY>
+ailfeedertype =
+# use uuidgen
+uuid =
+
+[folder]
+# basedir is the logs root folder
+basedir = .
+# a prefix can be prepended
+prefix =
+# a suffix can be appended
+suffix =
+# Leave datapattern empty to inspect all basedir's subfolders
+datepattern =
+# Set datepattern to a date pattern if you need a daily output
+# an instance with datepattern = %Y%m%d on the 12/10/2020 will
+# look into basedir/prefix20201012suffix
+# datepattern follows 1989 C standard
+
+# selector follows jmespath grammar
+# it should follow the multi-select hash spec
+# add u_ in front of keys to have these set together as keyid (this will be unique per exec)
+# for instance sending only one line to AIL for several client requests on a webserver would look like that:
+[selector]
+selector = "{u_request: request , u_remote_ip: ip, time: time}"
+
+[input]
+encoding = utf-8
